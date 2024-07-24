@@ -11,11 +11,14 @@ To record activity, first install javascript library to your HTML application an
 <script>magma_display_build();</script>
 ```
 
-To avoid user interface, you can start and stop programmatically the recording.
+To avoid user interface, you can handle programmatically the recording.
 ```js
 // Start capture
 magma_capture_start();
-
 // Stop capture
 magma_capture_stop();
+// Download capture
+magma_capture_download();
+// Reset capture
+magma_capture_reset();
 ```
