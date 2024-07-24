@@ -113,6 +113,8 @@ function magma_capture_toggle() {
     if (magma_is_capturing) {
         magma_display_show();
         magma_capture_stop();
+        magma_capture_download();
+        magma_capture_reset();
     } else {
         magma_display_hide();
         magma_capture_start();
@@ -186,8 +188,9 @@ function magma_capture_stop() {
     console.log("Magma capture stopped");
     
     magma_data_positions_blob = new Blob([JSON.stringify(magma_data_positions)], { type: 'application/json' });
-    magma_capture_download();
+}
 
+function magma_capture_reset(){
     magma_data_positions = [];
     magma_data_page_blob = null;
     magma_data_positions_blob = null;
