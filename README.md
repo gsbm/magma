@@ -22,3 +22,7 @@ magma_capture_download();
 // Reset capture
 magma_capture_reset();
 ```
+
+## License
+
+This project is licensed under [GPL-3.0](https://github.com/greenmagenta/autosculptor/LICENSE/) License.
